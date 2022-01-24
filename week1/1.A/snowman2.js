@@ -1,4 +1,4 @@
-let grid = undefined;
+// let grid = undefined;
 let stroke1 = prompt("enter a basic color name in lower case with no spaces for the body", "lightblue");
 let stroke2 = prompt("enter a basic color name for the hat", "red");
 let stroke3 = prompt("enter a basic color for the arms", "brown")
@@ -6,10 +6,10 @@ let stroke4 = prompt("enter a final basic color name for the body fill", "white"
 function setup() {
     createCanvas(1000, 800);
     background("#ccc");
-    grid = loadImage("100px_grid.png");
+    // grid = loadImage("100px_grid.png");
 }
 function draw() {
-    background(grid);
+    // background(grid);
     // legs
     fill(stroke4);
     strokeWeight(20);
