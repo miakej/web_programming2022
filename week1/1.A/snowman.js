@@ -1,16 +1,21 @@
-let grid = undefined;
+//let grid = undefined;
+let stroke1 = prompt("enter a basic color name in lower case with no spaces for the body", "lightblue");
+let stroke2 = prompt("enter a basic color name for the hat", "black");
+let stroke3 = prompt("enter a basic color for the arms", "brown")
+
+let fill1 = prompt("what color is your snow cat?", "orange")
 
 function setup() {
     createCanvas(1000, 800);
-    background("#ccc");
-    grid = loadImage("100px_grid.png");
+    background(240);
+    //grid = loadImage("100px_grid.png");
 }
 function draw() {
-    background(grid);
+
     // legs
     fill("white");
     strokeWeight(10);
-    stroke("aqua");
+    stroke(stroke1);
     // bottom snowball
     ellipse(500, 550, 350);
     // body
@@ -18,29 +23,30 @@ function draw() {
     // head
     ellipse(500, 200, 200);
     // hat brim
-    stroke("yellow");
+    fill(stroke2)
+    stroke(stroke2);
     strokeWeight(20);
     line(400, 120, 600, 120);
     // hat body
-    quad(400, 50, 600, 50, 550, 120, 450, 120);
+    rect(425, 20, 150, 100, 20, 20, 5, 5);
     // eyes
-    stroke(50);
-    strokeWeight(40);
-    point(425, 200);
-    point(575, 200);
+    stroke(40);
+    strokeWeight(30);
+    point(435, 200);
+    point(565, 200);
     // mouth
     noFill();
     strokeWeight(10);
     arc(500, 220, 80, 80, 0, HALF_PI);
     // arms 
-    stroke("brown");
-    strokeWeight(15);
-    line(400, 350, 300, 300);
-    line(580, 350, 680, 300);
+    stroke(stroke3);
+    strokeWeight(10);
+    line(390, 350, 300, 300);
+    line(590, 350, 680, 300);
 
     fill("white");
     strokeWeight(10);
-    stroke("aqua");
+    stroke(fill1);
     // cat body
     ellipse(200, 650, 200, 150);
     // cat head
