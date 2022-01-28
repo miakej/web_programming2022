@@ -23,3 +23,5 @@ const games = [
 ]
 console.log('all of the games explained', games);
 
+const gameSelection = window.prompt('Pick a number between 1 and 3 and Ill tell you about that game.');
+window.alert('You picked ' + games[gameSelection - 1].name + ', which is a ' + games[gameSelection - 1].type + ' game, best played with ' + games[gameSelection - 1].numberOfPlayers + ' To play the game, ' + games[gameSelection - 1].objective + ' The ideal setting to play this game is ' + games[gameSelection - 1].idealSetting + ' Enjoy!')
