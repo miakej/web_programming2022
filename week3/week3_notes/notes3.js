@@ -83,3 +83,18 @@ const myObject = {
     }
 }
 myObject.getPosition();
+
+
+
+
+
+// LOOPS
+// for loop with number: for (variable definition; condition; increment/ what happens to the loop variable each time it runs)
+// for (let i = 0; i < 10; i++) {
+//     console.log('this is i', i)
+// }
+// for loop with an array 
+const myMovies = ['star wars', 'empire strikes back', 'return of the jedi']
+for (let j = 0; j < myMovies.length; j++) {
+    console.log('i like', myMovies[j]);
+}
