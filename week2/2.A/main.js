@@ -1,7 +1,7 @@
 const questions = [
-    { question: 'question 1 here', answer: 'answer 1 here' },
-    { question: 'question 2 here', answer: 'answer 2 here' },
-    { question: 'question 3 here', answer: 'answer 3 here' },
+    { question: 'red + yellow =', answer: 'orange' },
+    { question: 'yellow + blue =', answer: 'green' },
+    { question: 'blue + red =', answer: 'purple' },
 ]
 console.log('all trivia questions', questions);
 
