@@ -138,8 +138,32 @@ for (let carIndex = cars.length - 1; carIndex > cars.length; carIndex--) {
 } */
 
 // while loop
-/* let check = 7;
+let check = 7;
 while(check > 0) {
     check = check - 1; // same thing as check--
     console.log("the check is currently", check)
-} */
+}
+
+// forEach - looping
+const cars = ['honda', 'ford', 'dodge', 'subaru', 'kia', 'Hyndai'];
+cars.forEach(function (car, index) {
+    console.log("looping over ", car, index);
+})
+
+// map - transformation
+const dogs = ['chihuahua', 'golden', 'collie', 'lab', 'poodle'];
+const capitalizedDogs = dogs.map(function (dog) {
+    return dog.toUpperCase();
+})
+console.log(capitalizedDogs, dogs);
+
+// filter - finding a specific thing
+function startsWithH(input) {
+    return input.toLowerCase().charAt(0) === "h".toLowerCase(); // to make case 'insensitive' add .toLowerCase
+}
+console.log("starts with", startsWithH("Herbert"));
+const carsThatStartWithH = cars.filter(startsWithH);
+console.log("H cars", carsThatStartWithH)
+
+
+// P5
