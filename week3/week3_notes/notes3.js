@@ -164,6 +164,3 @@ function startsWithH(input) {
 console.log("starts with", startsWithH("Herbert"));
 const carsThatStartWithH = cars.filter(startsWithH);
 console.log("H cars", carsThatStartWithH)
-
-
-// P5
