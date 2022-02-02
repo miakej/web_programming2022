@@ -114,10 +114,10 @@ myObject.getPosition();
     }
 }
 myCar.addWheel(); */
-function alertFn() {
+/* function alertFn() {
     return "this came from my function";
 }
-window.alert(alertFn);
+window.alert(alertFn); */
 
 
 
@@ -132,3 +132,14 @@ for (let j = 0; j < myMovies.length; j++) {
     console.log('i like', myMovies[j]);
 }
 
+/* const cars = ["honda", 'ford', 'dodge', 'subaru', 'kia'];
+for (let carIndex = cars.length - 1; carIndex > cars.length; carIndex--) {
+    console.log("I really like to drive a " + cars[carIndex] + " car.");
+} */
+
+// while loop
+/* let check = 7;
+while(check > 0) {
+    check = check - 1; // same thing as check--
+    console.log("the check is currently", check)
+} */
