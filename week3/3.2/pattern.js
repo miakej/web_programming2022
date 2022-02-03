@@ -14,19 +14,21 @@ function createTile(originX, originY, primaryColor, strokeColor, secondaryColor,
     quad(60, 100, 100, 60, 140, 100, 100, 140)
     line(0, 100, 200, 100);
     line(100, 0, 100, 200);
-    triangle(0, 0, 0, 60, 60, 0);
-    triangle(0, 200, 0, 140, 60, 200);
-    triangle(140, 200, 200, 200, 200, 140);
-    triangle(140, 0, 200, 0, 200, 60);
+    line(0, 0, 200, 200);
+    line(200, 0, 0, 200);
+    triangle(0, 0, 0, 80, 80, 0);
+    triangle(0, 200, 0, 120, 80, 200);
+    triangle(120, 200, 200, 200, 200, 120);
+    triangle(120, 0, 200, 0, 200, 80);
 }
 
 function draw() {
     createTile(0, 0, 'darkslategray', 'white', 'lightblue', 'peru');
     createTile(0, 200, 'darkslategray', 'white', 'goldenrod', 'lightblue');
     createTile(0, 200, 'darkslategray', 'white', 'lightblue', 'peru');
-    createTile(200, -400, 'darkslategray', 'white', 'goldenrod', 'darkcyan');
+    createTile(200, -400, 'darkslategray', 'white', 'goldenrod', 'lightblue');
     createTile(0, 200, 'darkslategray', 'white', 'lightblue', 'goldenrod');
-    createTile(0, 200, 'darkslategray', 'white', 'goldenrod', 'darkcyan');
+    createTile(0, 200, 'darkslategray', 'white', 'goldenrod', 'lightblue');
     createTile(200, -400,  'darkslategray', 'white', 'lightblue', 'peru');
     createTile(0, 200, 'darkslategray', 'white', 'goldenrod', 'lightblue');
     createTile(0, 200, 'darkslategray', 'white', 'lightblue', 'peru');
