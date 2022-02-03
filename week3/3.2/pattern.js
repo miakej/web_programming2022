@@ -21,13 +21,13 @@ function createTile(originX, originY, primaryColor, strokeColor, secondaryColor,
 }
 
 function draw() {
-    createTile(0, 0, 'peru', 'antiquewhite', 'lightblue', 'darkslategray');
+    createTile(0, 0, 'darkolivegreen', 'antiquewhite', 'olive', 'goldenrod');
     createTile(0, 200, 'darkslategray', 'antiquewhite', 'peru', 'lightblue');
-    createTile(0, 200, 'peru', 'antiquewhite', 'lightblue', 'darkslategray');
+    createTile(0, 200, 'darkolivegreen', 'antiquewhite', 'olive', 'goldenrod');
     createTile(200, -400, 'darkslategray', 'antiquewhite', 'peru', 'lightblue');
-    createTile(0, 200, 'lightblue', 'antiquewhite', 'peru', 'darkslategray');
+    createTile(0, 200, 'darkslategray', 'antiquewhite', 'olive', 'goldenrod');
     createTile(0, 200, 'darkslategray', 'antiquewhite', 'peru', 'lightblue');
-    createTile(200, -400, 'peru', 'antiquewhite', 'lightblue', 'darkslategray');
+    createTile(200, -400,  'darkolivegreen', 'antiquewhite', 'olive', 'goldenrod');
     createTile(0, 200, 'darkslategray', 'antiquewhite', 'peru', 'lightblue');
-    createTile(0, 200, 'peru', 'antiquewhite', 'lightblue', 'darkslategray');
+    createTile(0, 200, 'darkolivegreen', 'antiquewhite', 'olive', 'goldenrod');
 }
