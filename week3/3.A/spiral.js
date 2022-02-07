@@ -1,29 +1,30 @@
-let angle = 0;
-let rotateBy = 5;
+let rotateBy = 8;
+let r, g, b;
 
 function setup() {
-    createCanvas(600, 600);
-    background(0);
+    createCanvas(windowWidth, windowHeight);
     angleMode(DEGREES);
+    r = random(255);
+    g = random(255);
+    b = random(225);
+    background(r, g, b);
 }
 
-function makeArm(rotateBy) {
+function makeArm() {
     let alt = Math.round(rotateBy / 360);
     noFill();
-    stroke('white');
-    strokeWeight(1);
-    ellipse(150, 150 + alt, 150 / alt);
+    stroke(0);
+    strokeWeight(2);
+    ellipse(200, 200 / alt, 200 * alt, 150)
 }
 
 function draw() {
-    translate(300, 300);
+    translate(windowWidth / 2, windowHeight / 2);
     rotate(rotateBy);
     makeArm(rotateBy);
-    rotateby += 5;
+    rotateBy += 8;
 }
 
 function mousePressed() {
-    noLoop();
+    background(r, b, g) // refreshes spiro
 }
-
-
