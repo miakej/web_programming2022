@@ -1,5 +1,6 @@
 let rotateBy = 8;
 let r, g, b;
+let spiro = window.prompt("select spiral size");
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -15,7 +16,8 @@ function makeArm() {
     noFill();
     stroke(0);
     strokeWeight(2);
-    ellipse(200, 200 / alt, 200 * alt, 150)
+    ellipse(spiro, spiro / alt, spiro * alt, spiro * 2);
+    rect(spiro, spiro / alt, spiro * alt, spiro);
 }
 
 function draw() {
