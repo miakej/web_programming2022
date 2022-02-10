@@ -38,4 +38,6 @@ function drawShape () {
     fill('cadetblue');
     noStroke();
     rect(rectX, rectY, rectWidth, rectHeight);
+    fill('white');
+    text('CLICK ME!', rectX + 5, rectY + 35);
 }
