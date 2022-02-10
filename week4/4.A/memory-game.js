@@ -6,16 +6,16 @@ function setup() {
 }
 let cards = [];
 function draw() {
-    background('#ccc');
+    background('peru');
     noLoop();
-    fill('peru');
-    for (let j = 0; j < 9; j++) {
-        for (let i = 0; i < 9; i++) {
-            const newCard = {x: i * 150, y: j * 150, width: 100, height: 100}
+    fill('aliceblue');
+    for (let j = 0; j < 4; j++) {
+        for (let i = 0; i < 4; i++) {
+            const newCard = {x: i * 200, y: j * 225, width: 150, height: 175}
             rect(newCard.x, newCard.y, newCard.width, newCard.height);
             cards.push();
         }
     }
- 
+
     console.log('cards', cards);
 }
