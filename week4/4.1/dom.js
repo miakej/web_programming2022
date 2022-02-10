@@ -4,7 +4,7 @@ const myEmptyDiv = document.querySelector('#myEmptyDiv');
 // take variable and put h1 inside
 // create new element
 const heading = document.createElement('h1');
-heading.innerHTML = 'I love snacks.';
+heading.innerHTML = 'Llamas love snacks.';
 myEmptyDiv.appendChild(heading);
 
 // attach click event listener
