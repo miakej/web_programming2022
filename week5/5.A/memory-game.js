@@ -4,8 +4,14 @@ let startingX = 25;
 let startingY = 25;
 let cards = [];
 const gameState = {
+    totalPairs: 0,
+    flippedCards: [],
+    numMatched: 0,
+    attempts: 0,
+    waiting: false,
+};
 
-}
+// IMAGES for card front and back
 let cardfaceArray = [];
 let cardBack;
 function preload() {
@@ -21,6 +27,8 @@ function preload() {
         loadImage('cards/zion.png'),
     ]
 }
+
+// SETUP 
 function setup() {
     createCanvas(1000, 1000);
     background('aliceblue');
@@ -45,6 +53,7 @@ function setup() {
     }
 }
 
+// flip function
 function mousePressed() {
     for (let k = 0; k < cards.length; k++) {
         if(cards[k].didHit(mouseX, mouseY)) {
@@ -53,6 +62,7 @@ function mousePressed() {
     }
 }
 
+// CARD CLASS with show and flip method
 class Card {
     constructor (x, y, cardfaceImg) {
         this.x = x;
@@ -96,6 +106,7 @@ class Card {
     }
 }
 
+// RANDOM SHUFFLE 
 function shuffleArray (cardArray) {
     let counter = cardArray.length;
     while (counter > 0) {
@@ -109,4 +120,4 @@ function shuffleArray (cardArray) {
         cardArray[idx] = temp;
     }
     return cardArray;
-}
+} 
