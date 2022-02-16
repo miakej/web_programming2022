@@ -1,21 +1,38 @@
-let myCard;
 const DOWN = 'down';
 const UP = 'up';
+let startingX = 25;
+let startingY = 25;
+let cards = [];
+const gameState = {
+
+}
 
 function setup() {
-    createCanvas(900, 900);
+    createCanvas(1000, 1000);
     background('aliceblue');
-    myCard = new Card();
+    // myCard = new Card();
+    for (let j = 0; j < 4; j++) {
+        for (let i = 0; i < 4; i++) {
+            cards.push(new Card(startingX, startingY));
+            startingX +=175;
+        }
+        startingY += 225;
+        startingX = 25;
+    }
 }
 
 function mousePressed() {
-    console.log(myCard.didHit(mouseX, mouseY));
+    for (let k = 0; k < cards.length; k++) {
+        if(cards[k].didHit(mouseX, mouseY)) {
+            console.log('flipped');
+        }
+    }
 }
 
 class Card {
-    constructor () {
-        this.x = 100;
-        this.y = 100;
+    constructor (x, y) {
+        this.x = x;
+        this.y = y;
         this.width = 150;
         this.height = 200;
         this.face = DOWN;
