@@ -126,10 +126,12 @@ class Card {
     show () {
         if (this.face === UP || this.isMatch) { 
             // face up
+            noStroke();
             rect(this.x, this.y, this.width, this.height, 5);
             image(this.cardfaceImg, this.x, this.y, this.width, this.height) 
         } else { 
             // face down
+            noStroke();
             rect(this.x, this.y, this.width, this.height, 5);
             image(cardBack, this.x, this.y, this.width, this.height) 
         }
