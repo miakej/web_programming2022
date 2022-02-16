@@ -4,7 +4,7 @@ let startingX = 25;
 let startingY = 25;
 let cards = [];
 const gameState = {
-    totalPairs: 0,
+    totalPairs: 8,
     flippedCards: [],
     numMatched: 0,
     attempts: 0,
@@ -33,7 +33,7 @@ function setup() {
     createCanvas(1000, 1000);
     background('aliceblue');
     let selectedFaces = []; // could do this in preload, but makes sense in setup
-    for (let m = 0; m < 8; m++) {
+    for (let z = 0; z < 8; z++) {
         const randomIdx = floor(random(cardfaceArray.length));
         const face = cardfaceArray[randomIdx];
         selectedFaces.push(face);
@@ -44,8 +44,8 @@ function setup() {
     selectedFaces = shuffleArray(selectedFaces);
     for (let j = 0; j < 4; j++) {
         for (let i = 0; i < 4; i++) {
-            const faceImage = selectedFaces.pop();
-            cards.push(new Card(startingX, startingY, faceImage));
+            const cardfaceImg = selectedFaces.pop();
+            cards.push(new Card(startingX, startingY, cardfaceImg));
             startingX +=175;
         }
         startingY += 225;
@@ -53,11 +53,60 @@ function setup() {
     }
 }
 
+// draw function
+function draw () {
+    // background('thistle'); // COVERS UP CARDS
+    if (gameState.numMatched === gameState.totalPairs) {
+        fill('goldenrod');
+        textSize(50);
+        text('YOU WIN!', 750, 200);
+        noLoop(); // could add button here to reset/try again
+    }
+    for (let k = 0; k < cards.length, k++;) {
+        if (!cards[k].isMatch) {
+            cards[k].face = DOWN;
+        }
+        cards[k].show();
+    }
+    noLoop();
+    gameState.flippedCards.length = 0;
+    gameState.waiting = false;
+    fill('cadetblue');
+    textSize(36);
+    text('attempts: ' + gameState.attempts, 725, 500);
+    text('matches: ' + gameState.numMatched, 725, 450); 
+}
+
 // flip function
 function mousePressed() {
+    if (gameState.waiting) {
+        return;
+    }
     for (let k = 0; k < cards.length; k++) {
-        if(cards[k].didHit(mouseX, mouseY)) {
-            console.log('flipped', cards[k]);
+        // limits cards guessed to 2, and then trigger flip
+        if(gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) {
+            // console.log('flipped', cards[k]);
+            gameState.flippedCards.push(cards[k]);
+        }
+    }
+    if (gameState.flippedCards.length === 2) {
+        gameState.attempts++;
+        if (gameState.flippedCards[0].cardfaceImg === gameState.flippedCards[1].cardfaceImg) {
+            // Cards Match! Mark cards as matched so they don't flip back
+            gameState.flippedCards[0].isMatch = true;
+            gameState.flippedCards[1].isMatch = true;
+                                        console.log('cards match!');
+            // empty the flipped cards array
+            gameState.flippedCards.length = 0;
+            // increment the score
+            gameState.numMatched++;
+            loop();
+        } else {
+            gameState.waiting = true;
+            const loopTimeout = window.setTimeout(() => {
+                loop();
+                window.clearTimeout(loopTimeout);
+            }, 1000); // can make game harder by decreasing time, or not giving timeout
         }
     }
 }
@@ -71,17 +120,18 @@ class Card {
         this.height = 200;
         this.face = DOWN;
         this.cardfaceImg = cardfaceImg;
+        this.isMatch = false;
         this.show();
     }
     show () {
-        if(this.face === DOWN) { // face down
-            noStroke();
-            rect(this.x, this.y, this.width, this.height, 5);
-            image(cardBack, this.x, this.y, this.width, this.height) 
-        } else { // face up
-            fill('goldenrod');
+        if (this.face === UP || this.isMatch) { 
+            // face up
             rect(this.x, this.y, this.width, this.height, 5);
             image(this.cardfaceImg, this.x, this.y, this.width, this.height) 
+        } else { 
+            // face down
+            rect(this.x, this.y, this.width, this.height, 5);
+            image(cardBack, this.x, this.y, this.width, this.height) 
         }
        }
 
@@ -120,4 +170,4 @@ function shuffleArray (cardArray) {
         cardArray[idx] = temp;
     }
     return cardArray;
-} 
+}
