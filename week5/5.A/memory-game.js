@@ -32,7 +32,7 @@ function preload() {
 function setup() {
     createCanvas(1000, 1000);
     background('aliceblue');
-    let selectedFaces = []; // could do this in preload, but makes sense in setup
+    let selectedFaces = []; 
     for (let z = 0; z < 8; z++) {
         const randomIdx = floor(random(cardfaceArray.length));
         const face = cardfaceArray[randomIdx];
@@ -55,7 +55,7 @@ function setup() {
 
 // draw function
 function draw () {
-    // background('thistle'); // COVERS UP CARDS
+    // background('slategray'); // COVERS UP CARDS
     if (gameState.numMatched === gameState.totalPairs) {
         fill('goldenrod');
         textSize(50);
@@ -71,7 +71,7 @@ function draw () {
     noLoop();
     gameState.flippedCards.length = 0;
     gameState.waiting = false;
-    fill('cadetblue');
+    fill('goldenrod');
     textSize(36);
     text('attempts: ' + gameState.attempts, 725, 500);
     text('matches: ' + gameState.numMatched, 725, 450); 
@@ -85,7 +85,6 @@ function mousePressed() {
     for (let k = 0; k < cards.length; k++) {
         // limits cards guessed to 2, and then trigger flip
         if(gameState.flippedCards.length < 2 && cards[k].didHit(mouseX, mouseY)) {
-            // console.log('flipped', cards[k]);
             gameState.flippedCards.push(cards[k]);
         }
     }
@@ -95,7 +94,7 @@ function mousePressed() {
             // Cards Match! Mark cards as matched so they don't flip back
             gameState.flippedCards[0].isMatch = true;
             gameState.flippedCards[1].isMatch = true;
-                                        console.log('cards match!');
+            console.log('cards match!'); // CONSOLE IS NOT LOGGING MATCH, SOMETHING IS OFF ^^
             // empty the flipped cards array
             gameState.flippedCards.length = 0;
             // increment the score
@@ -151,9 +150,8 @@ class Card {
         if (this.face === DOWN) {
             this.face = UP;
         } else {
-            this.face = DOWN; // technically might not need this
+            this.face = DOWN;
         }
-
         this.show();
     }
 }
