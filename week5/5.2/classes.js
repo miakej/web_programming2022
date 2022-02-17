@@ -1,47 +1,47 @@
-/* 
-Use a for loop in the draw function to draw a number of instances of your class on the canvas. */
-
-let bubble1;
-let bubble2;
-let bubble3;
-let bubble4;
+let bubbles = [];
 
 function setup() {
-    createCanvas(400,400);
-    bubble1 = new Bubble();
-    bubble2 = new Bubble();
-    bubble3 = new Bubble();
-    bubble4 = new Bubble();
+    createCanvas(windowWidth, 1000);
+    for (let i = 0; i < 200 ; i++) {
+        let x = random(width);
+        let y = random(height);
+        let s = random(1, 30);
+        // bubble pastel and transparency
+        let r = random(200, 250);
+        let b = random(200, 250);
+        let g = random(200, 250);
+        let t = random(20, 100);
+        let c = color(r, b, g, t);
+        bubbles[i] = new Bubble(x, y, s, c);
+    }
 }
 
 function draw() {
-    background('peru');
-    bubble1.move();
-    bubble1.show();
-    bubble2.move();
-    bubble2.show();
-    bubble3.move();
-    bubble3.show();
-    bubble4.move();
-    bubble4.show();
+    background('cadetblue');
+    for (let i = 0; i < 200; i++) {
+        bubbles[i].move();
+        bubbles[i].show();
+    }
 }
 
 class Bubble {
     // properties
-    constructor () {
-        this.x = 200;
-        this.y = 200;
+    constructor (x, y, s, c) {
+        this.x = x;
+        this.y = y;
+        this.s = s;
+        this.c = c;
     }
     // methods
     move () {
-        this.x = this.x + random(-5, 5);
-        this.y = this.y + random(-5, 5);
+        this.x = this.x + random(-2, 2);
+        this.y = this.y + random(-4, 0);
     }
     
     show () {
-        stroke(225);
+        stroke(this.c);
         strokeWeight(3);
-        fill('thistle');
-        ellipse(this.x, this.y, 80, 80);
+        fill(this.c);
+        ellipse(this.x, this.y, this.s * 5);
     }
 }
