@@ -1,7 +1,7 @@
 let bubbles = [];
 
 function setup() {
-    createCanvas(windowWidth, 1000);
+    createCanvas(windowWidth, windowHeight);
     for (let i = 0; i < 200 ; i++) {
         let x = random(width);
         let y = random(height);
@@ -35,13 +35,13 @@ class Bubble {
     // methods
     move () {
         this.x = this.x + random(-2, 2);
-        this.y = this.y + random(-4, 0);
+        this.y = this.y + random(-3, 0);
     }
     
     show () {
         stroke(this.c);
         strokeWeight(3);
         fill(this.c);
-        ellipse(this.x, this.y, this.s * 5);
+        ellipse(this.x, this.y * 2, this.s * 5);
     }
 }
