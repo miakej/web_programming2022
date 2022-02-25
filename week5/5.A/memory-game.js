@@ -30,7 +30,7 @@ function preload() {
 
 // SETUP 
 function setup() {
-    createCanvas(1000, 1000);
+    createCanvas(950, 950);
     background('aliceblue');
     let selectedFaces = []; 
     for (let z = 0; z < 8; z++) {
@@ -55,14 +55,14 @@ function setup() {
 
 // draw function
 function draw () {
-    // background('slategray'); // COVERS UP CARDS
+    background('cadetblue'); 
     if (gameState.numMatched === gameState.totalPairs) {
-        fill('goldenrod');
-        textSize(50);
-        text('YOU WIN!', 750, 200);
-        noLoop(); // could add button here to reset/try again
+        fill('seashell');
+        textSize(40);
+        text('YOU WIN!', 725, 200);
+        noLoop(); 
     }
-    for (let k = 0; k < cards.length, k++;) {
+    for (let k = 0; k < cards.length; k++) {
         if (!cards[k].isMatch) {
             cards[k].face = DOWN;
         }
@@ -71,7 +71,7 @@ function draw () {
     noLoop();
     gameState.flippedCards.length = 0;
     gameState.waiting = false;
-    fill('goldenrod');
+    fill('seashell');
     textSize(36);
     text('attempts: ' + gameState.attempts, 725, 500);
     text('matches: ' + gameState.numMatched, 725, 450); 
