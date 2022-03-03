@@ -1,0 +1,20 @@
+[v-cloak] {
+    display: none
+  }
+  
+  body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+    margin: 2rem;
+    font-size: 24px;
+  }
+  
+  a {
+    color: lightcoral;
+    text-decoration: underline wavy pink;
+  }
+  
+  .active {
+        border-radius: 15px;
+      }
+  }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Llamas Vs. Alpacas</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <h1 :style="[baseStyle, overRideStyle]">
+          Llamas vs. Alpacas
+        </h1>
+        
+        <p>
+          What's the difference between an <a :href ="alpacaLink" :title="alpacaTitle" >alpaca</a> and a <a :href ="llamaLink" :title="llamaTitle" >llama</a>? Maybe this diagram can help!</p>
+        <img :class="{ active: isActive }" src="https://i.redd.it/8vncab0cz3jz.jpg" >
+      </div>
+
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
