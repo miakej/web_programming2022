@@ -1,23 +1,47 @@
 /* Add your styles here */
 html {
-  font-family: Verdana, Geneva, "DejaVu Sans", sans-serif
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+body {
+  background: #ffddd2;
+  margin: 0;
 }
 .llama-list-title {
-  border-bottom: 2px solid #333;
+  color: #006D77;
   margin: 10px auto;
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
+  padding: .5rem;
 }
 .list-container {
-  border-bottom: 1px solid #333;
-  padding: 5px;
+  padding: 0;
 }
 .list-head .rank, .list-head .name {
   display: inline-block;
   width: 45%;
   text-align: center;
+  font-size: 2em;
+  color: #ed9578;
+  padding-bottom: 1rem;
 }
 
-.list-body {
-  border: 1px solid pink
+.list-name, .list-rank {
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+  font-size: 1em;
+}
+.odd {
+  background: #ed9578;
+  color: #ffddd2;
+}
+
+.even {
+  color: #ed9578;
+  background: #ffddd2;
+}
+
+.highlight {
+  font-style: italic;
+  text-decoration: underline wavy;
 }

@@ -16,8 +16,16 @@
         <span class="name">Name</span>
       </div>
 
+      <div 
+        v-for="(pun, index) in llamas"
+        v-bind:class="{even: (index + 1) % 2 === 0, odd: (index + 1) % 2 !== 0}"
+      >
+        <span class="list-rank"><h2>{{pun.rank}}</h2></span>
+        <span class="list-name" v-bind:class="{highlight: pun.name.toLowerCase().includes('llama')}"><h2>{{pun.name}}</h2></span>
+        
+      </div>
     </div>
-    <p>{{llamas[0]}}</p>
+    
   </div>
 
   <script src="llamas.js"></script>
