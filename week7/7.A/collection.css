@@ -1,0 +1,58 @@
+body {
+    background: darkslategray;
+}
+
+table, thead, th, tbody, tr, td {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Calistoga', cursive;
+    padding: .5rem;
+}
+
+h1 {
+    font-family: 'Monoton', cursive;
+    font-size: 4em;
+    text-align: center;
+    color: white;
+}
+
+th {
+    font-size: 2em;
+    background-color: white;
+    
+}
+
+td {
+    font-size: 1.5em;
+}
+
+img {
+    max-width: 200px;
+}
+
+a {
+    text-decoration: underline wavy;
+    color: black;
+}
+
+tr:hover {
+    opacity: 70%;
+    background: yellow;
+}
+
+
+.diamond {
+    background:conic-gradient(
+        #e6e9bf, #d2b5aa, #cbaea3, #d4b5ab,
+        #e6e9bf, #d2b5aa, #cbaea3, #d4b5ab,
+        #e6e9bf, #d2b5aa, #cbaea3, #d4b5ab,
+        #e6e9bf, #d2b5aa, #cbaea3, #d4b5ab)
+}
+
+.platinum {
+    background:conic-gradient(
+        #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+        #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+        #d7d7d7, #c3c3c3, #cccccc, #c6c6c6,
+        #d7d7d7, #c3c3c3, #cccccc, #c6c6c6);
+    }
