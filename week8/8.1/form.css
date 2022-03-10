@@ -1,9 +1,37 @@
+html {
+    background-image: url("https://previews.123rf.com/images/goodstudio/goodstudio1810/goodstudio181000323/111514861-seamless-pattern-with-cute-llamas-and-alpacas-on-white-background-backdrop-with-funny-wild-wooly-dom.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+}
 form {
     width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 20 auto;
+    padding: 3rem;
+    background:#F4D3B7; 
+    border: 3px solid #847468;
+    border-radius: 20px;
 }
 
+fieldset {
+    border: 3px solid #847468;
+    background: white;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+legend {
+    background-color: #d6a37b;
+    color:white;
+    border: 1px solid #847468;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+input:focus, input:hover {
+    background: rgb(214, 184, 171, 20);
+    color:#685B52;
+}
 div {
     margin: 10px 0;
     display: flex;
@@ -19,6 +47,7 @@ div label {
 
 div input, select {
     flex-grow: 1;
+    border-radius: 5px;
 }
 
 ul {
