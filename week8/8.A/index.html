@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinyl Collection</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="collection.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&family=Calistoga&family=Monoton&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <h1>1970's Vinyl Collection</h1>
+
+    <div id="vinylApp">
+        <table>
+            <thead>
+                <th>Cover</th>
+                <th>Album</th>
+                <th>Artist</th>
+                <th>Year</th>
+                <th>Label</th>
+                <th>Award</th>
+                <th><a :href="rankLink" :title="rankTitle">Rank</a></th>
+            </thead>
+            <tbody>
+                <tr 
+                v-for="(album, index) in vinyls"
+                v-bind:class="{diamond: album.award === 'Diamond', platinum: album.award === 'Platinum'}"
+                >
+                    <td><img :title="album.album" :src="album.cover" :alt="album.artist + ' ' + album.album + ' cover art'"></td>
+                    <td>{{album.album}}</td>
+                    <td>{{album.artist}}</td>
+                    <td>{{album.year}}</td>
+                    <td>{{album.label}}</td>
+                    <td>{{album.award}}</td>
+                    <td>{{album.rank}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="collection.js"></script>
+</body>
+</html>
