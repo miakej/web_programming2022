@@ -10,20 +10,22 @@
 <body>
     <div id="calcApp">
         <form>
-            <div>
-                <input v-model.number="firstNum" type="number" placeholder="first number">
-                <select v-model="operation">
+            <div id="numbers">
+                <input v-model.number="firstNum" type="number" placeholder="1st number" class="entry">
+                <select v-model="operation" class="operation">
                     <option value="add">+</option>
                     <option value="subtract">-</option>
                     <option value="multiply">&times;</option>
                     <option value="divide">&divide;</option>
                 </select>
-                <input v-model.number="secondNum" type="number" placeholder="second number">
-            </div>
-            <button v-on:click="calculate(firstNum, secondNum)" type="button">Calculate</button>
+                <input v-model.number="secondNum"
+                placeholder="2nd number" type="number" class="entry">
+
+            <button v-on:click="calculate(firstNum, secondNum)" type="button">=</button>
+        </div>
         </form>
 
-        <div>
+        <div class="total">
             Total: <strong>{{total}}</strong>
         </div>
     </div>

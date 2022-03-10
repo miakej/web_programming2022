@@ -1,0 +1,33 @@
+* {
+    font-size: 60;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+html {
+    background: pink;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+.entry {
+    margin: 1rem .5rem 0;
+    width: 150px;
+    background: rgb(255, 234, 237);
+    color: orange;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button, .operation {
+    background: teal;
+    color: rgb(255, 234, 237);
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.total {
+    color: teal;
+}
