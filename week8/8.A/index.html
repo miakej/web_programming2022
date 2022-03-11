@@ -22,22 +22,18 @@
                 <th>Album</th>
                 <th>Artist</th>
                 <th>Year</th>
-                <th>Label</th>
-                <th>Award</th>
-                <th><a :href="rankLink" :title="rankTitle">Rank</a></th>
+                <th>In Collection?</th>
             </thead>
             <tbody>
                 <tr 
                 v-for="(album, index) in vinyls"
-                v-bind:class="{diamond: album.award === 'Diamond', platinum: album.award === 'Platinum'}"
+                v-bind:class="{keep: album.owned === 'yes', buy: album.owned === 'not yet'}"
                 >
                     <td><img :title="album.album" :src="album.cover" :alt="album.artist + ' ' + album.album + ' cover art'"></td>
                     <td>{{album.album}}</td>
                     <td>{{album.artist}}</td>
                     <td>{{album.year}}</td>
-                    <td>{{album.label}}</td>
-                    <td>{{album.award}}</td>
-                    <td>{{album.rank}}</td>
+                    <td>{{album.owned}}</td>
                 </tr>
             </tbody>
         </table>
