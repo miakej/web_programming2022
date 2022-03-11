@@ -1,5 +1,5 @@
 body {
-    background: darkgray;
+    background: #93E1D8; 
 }
 
 table, thead, th, tbody, tr, td {
@@ -13,13 +13,13 @@ h1 {
     font-family: 'Monoton', cursive;
     font-size: 4em;
     text-align: center;
-    color: white;
+    color: #fff;
 }
 
 th {
     font-size: 2em;
-    background-color: yellow;
-    
+    background-color: white;
+    color: #EEC643; 
 }
 
 td {
@@ -30,24 +30,18 @@ img {
     max-width: 200px;
 }
 
-a {
-    text-decoration: underline wavy;
-    color: black;
-}
-
 tr:hover {
     opacity: 70%;
-    background: yellow;
+    background: #ddfff7;
     color: black;
 }
 
-
 .buy {
-    background: black;
-    color: white;
+    background: white;
+    color: #114B5F;
     }
 
 .keep {
-    background:white;
-    color: black;
+    background: #11485F;
+    color: white;
 }
