@@ -17,7 +17,7 @@ h1 {
     font-family: 'Monoton', cursive;
     font-size: 4em;
     text-align: center;
-    color: #fff;
+    color: #114B5F;
 }
 
 th {
@@ -35,8 +35,8 @@ img {
 }
 
 tr:hover {
-    opacity: 70%;
-    background: #ddfff7;
+    
+    background: #EEC643;
     color: black;
 }
 
@@ -55,13 +55,23 @@ tr:hover {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background: #11485F;
+    border: none;
 }
 
 .new-console-form div {
     margin: 10px 0;
     width: 120px;
+   color: white;
 }
 
+legend {
+    background: white;
+    color:#EEC643;
+    font-family: 'Calistoga', cursive;
+    padding: 10px;
+    border-radius: 10px;
+}
 .new-console-form div label {
     max-width: 120px;
 }
@@ -69,4 +79,7 @@ tr:hover {
 .new-console-form input {
     max-width: 120px;
     display:block;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
 }

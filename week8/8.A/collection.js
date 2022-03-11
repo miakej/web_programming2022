@@ -6,7 +6,7 @@ let vm = Vue.createApp({
             artist: " ",
             album: " ",
             year: " ",
-            owned: false,
+            owned: ' ',
         },
         rankLink: "https://www.rollingstone.com/music/music-lists/best-albums-of-all-time-1062063/",
         rankTitle: "Rolling Stones 500 Best Albums of All Time",
@@ -57,7 +57,7 @@ let vm = Vue.createApp({
                 artist: " ",
                 album: " ",
                 year: " ",
-                owned: false,
+                owned: ' ',
             };
         },
         deleteItem: item => {
