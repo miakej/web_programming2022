@@ -22,21 +22,51 @@
                 <th>Album</th>
                 <th>Artist</th>
                 <th>Year</th>
-                <th>In Collection?</th>
+                <th>Owned</th>
+                <th class="cellActions">Delete</th>
             </thead>
             <tbody>
                 <tr 
                 v-for="(album, index) in vinyls"
-                v-bind:class="{keep: album.owned === 'yes', buy: album.owned !== 'yes'}"
+                v-bind:class="{keep: album.owned === 'yes', newKeep: newVinylObj.owned === 'yes', buy: album.owned !== 'yes'}"
                 >
                     <td><img :title="album.album" :src="album.cover" :alt="album.artist + ' ' + album.album + ' cover art'"></td>
                     <td>{{album.album}}</td>
                     <td>{{album.artist}}</td>
                     <td>{{album.year}}</td>
                     <td>{{album.owned}}</td>
+                    <td class="cellActions">
+                        <button type="button" v-on:click="deleteItem(album)">Delete</button> 
+                    </td>
                 </tr>
             </tbody>
         </table>
+        <form v-on:submit.prevent="submitHandler" class="new-console-form">
+            <fieldset>
+                <legend>Add a vinyl to the collection</legend>
+                <div>
+                    <label for="cover">Cover Art (URL)</label>
+                    <input id="cover" type="text" v-model="newVinylObj.cover">
+                </div>
+                <div>
+                    <label for="album">Album</label>
+                    <input id="album" type="text" v-model="newVinylObj.album">
+                </div>
+                <div>
+                    <label for="artist">Artist</label>
+                    <input id="artist" type="text" v-model="newVinylObj.artist">
+                </div>
+                <div>
+                    <label for="year">Year</label>
+                    <input id="year" type="text" v-model="newVinylObj.year">
+                </div>
+                <div>
+                    <label for="owned">Owned?</label>
+                    <input id="owned" type="text" v-model="newVinylObj.owned">
+                </div>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>
     </div>
     <script src="collection.js"></script>
 </body>

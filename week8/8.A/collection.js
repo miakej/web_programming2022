@@ -1,6 +1,13 @@
-Vue.createApp({
+let vm = Vue.createApp({
     data() {
       return {
+        newVinylObj: {
+            cover: " ",
+            artist: " ",
+            album: " ",
+            year: " ",
+            owned: false,
+        },
         rankLink: "https://www.rollingstone.com/music/music-lists/best-albums-of-all-time-1062063/",
         rankTitle: "Rolling Stones 500 Best Albums of All Time",
         vinyls: [
@@ -37,5 +44,26 @@ Vue.createApp({
             }
         ]
       }
+    },
+    methods: {
+        submitHandler: () => {
+            console.log('submitted');
+            vm.vinyls = vm.vinyls.concat(vm.newVinylObj);
+            vm.resetForm();
+        },
+        resetForm: () => {
+            vm.newVinylObj = {
+                cover: " ",
+                artist: " ",
+                album: " ",
+                year: " ",
+                owned: false,
+            };
+        },
+        deleteItem: item => {
+            vm.vinyls = vm.vinyls.filter(album => {
+                return album !== item;
+            })
+        }
     }
   }).mount("#vinylApp");

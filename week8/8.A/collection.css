@@ -9,6 +9,10 @@ table, thead, th, tbody, tr, td {
     padding: 1rem;
 }
 
+td {
+    width: 200px;
+}
+
 h1 {
     font-family: 'Monoton', cursive;
     font-size: 4em;
@@ -41,7 +45,28 @@ tr:hover {
     color: #114B5F;
     }
 
-.keep {
+.keep, .newKeep {
     background: #11485F;
     color: white;
+}
+
+.new-console-form fieldset {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.new-console-form div {
+    margin: 10px 0;
+    width: 120px;
+}
+
+.new-console-form div label {
+    max-width: 120px;
+}
+
+.new-console-form input {
+    max-width: 120px;
+    display:block;
 }
