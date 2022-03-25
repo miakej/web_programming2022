@@ -1,8 +1,9 @@
 <script setup>
  // javascript here
+ import {reactive} from "vue";
  import AnimalRow from './components/AnimalRow.vue';
  const isWorking = true;
- const animals = [
+ let animals = [
       {
         commonName: "Lama",
         binomialName: "Lama glama",
@@ -24,13 +25,22 @@
         id: 2
       },
     ];
-    
+  const state = reactive({animals});
+  function handleRowDelete(animal) {
+    state.animals = state.animals.filter(item => {
+      return item !== animal;
+    });
+  }
 </script>
 
 <template>
   <div class="container">
     <h1>Animals</h1>
-    <AnimalRow v-for="animal in animals" v-bind:key="animal.id" v-bind:animal="animal"/>
+    <AnimalRow 
+      v-for="animal in state.animals" 
+      :key="animal.id" 
+      :animal="animal" 
+      @delete-row="handleRowDelete" />
   </div>
 </template>
 

@@ -1,13 +1,17 @@
 <script setup>
     const props = defineProps(['animal']);
     console.log(props.animal);
+    const triggerConsole = (animal) => {
+        console.log("you clicked", animal.commonName);
+    }
 </script>
 
 <template>
   <div class="animal-row">
-    <h5>{{props.animal.name}}</h5>
+    <h5 @click="$emit('headlineClick', props.animal.commonName)">{{props.animal.commonName}}</h5>
     <img v-bind:src="props.animal.image" v-bind:alt="props.animal.commonName"/>
     <p>{{props.animal.caption}}</p>
+    <button type="button" v-on:click="$emit('deleteRow', props.animal)">Delete</button>
   </div>
 </template>
 
