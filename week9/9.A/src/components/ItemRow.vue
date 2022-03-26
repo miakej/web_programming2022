@@ -5,7 +5,7 @@
 
 <template>
     <div class="tbody">
-        <div class="tr" v-bind:class="{tr: true, odd: index % 2 !== 0, }">
+        <div class="tr" v-bind:class="{tr: true, even: index % 2 === 0, odd: index % 2 !== 0}">
             <div class="td album-cover">
                 <img :title="album.album" :src="album.cover" :alt="album.artist + ' ' + album.album + ' cover art'"></div>
             <div class="td album-name">{{album.album}}</div>
