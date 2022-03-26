@@ -48,32 +48,17 @@
   <div class="collection-wrapper">
   <h1>1970's Vinyl Collection</h1>
      <div id="vinylApp">
-        <table>
-            <thead>
-                <th>Cover</th>
-                <th>Album</th>
-                <th>Artist</th>
-                <th>Year</th>
-                <th>Owned</th>
-                <th class="cellActions">Delete</th>
-            </thead>
-            <tbody>
-                <tr
-                v-for="(album, index) in state.vinyls"
-                :key="index"
-                :class="{keep: album.owned === 'yes', newKeep: newVinylObj.owned === 'yes', buy: album.owned !== 'yes'}"
-                >
-                    <td><img :title="album.album" :src="album.cover" :alt="album.artist + ' ' + album.album + ' cover art'"></td>
-                    <td>{{album.album}}</td>
-                    <td>{{album.artist}}</td>
-                    <td>{{album.year}}</td>
-                    <td>{{album.owned}}</td>
-                    <td class="cellActions">
-                        <button type="button" v-on:click="deleteItem(album)">Delete</button> 
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table">
+            <div class="collectionRow header">
+                <div class="cell cover-image">Cover</div>
+                <div class="cell album-name">Album</div>
+                <div class="cell album-artist">Artist</div>
+                <div class="cell album-year">Year</div>
+                <div class="cell owned">Owned</div>
+                <div class="cell actions">Delete</div>
+            </div>
+
+        </div>
         <form v-on:submit.prevent="submitHandler" class="new-console-form">
             <fieldset>
                 <legend>Add a vinyl to the collection</legend>
