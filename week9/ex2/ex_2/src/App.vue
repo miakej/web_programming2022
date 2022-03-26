@@ -5,11 +5,11 @@
  const isWorking = true;
  let animals = [
       {
-        commonName: "Lama",
-        binomialName: "Lama glama",
+        commonName: "Llama",
+        binomialName: "Llama glama",
         order: "Artiodactyla",
         family: "Camelidae",
-        genus: "Lama",
+        genus: "Llama",
         species: "L. glama",
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Llama_lying_down.jpg/220px-Llama_lying_down.jpg",
         id: 1
