@@ -4,35 +4,35 @@
      
     const vinyls =  [
             {   
-                cover: "src/covers/marvin-gaye.jpg",
+                cover: "./assets/covers/marvin-gaye.jpg",
                 artist: "Marvin Gaye",
                 album: "What's Going On",
                 year: "1971",
                 owned: "yes",
                 id: 1,
    }, {  
-                cover: "src/covers/joni-mitchell.jpg", 
+                cover: "./assets/covers/joni-mitchell.jpg", 
                 artist: "Joni Mitchell",
                 album: "Blue",
                 year: "1971",
                 owned: "yes",
                 id: 2,
    }, {   
-                cover: "src/covers/fleetwood-mac.jpg",
+                cover: "./assets/covers/fleetwood-mac.jpg",
                 artist: "Fleetwood Mac",
                 album: "Rumors",
                 year: "1977",
                 owned: "yes",
                 id: 3,
    }, {   
-                cover: "src/covers/bob-dylan.jpg",
+                cover: "./assets/covers/bob-dylan.jpg",
                 artist: "Bob Dylan",
                 album: "Blood on the Tracks",
                 year: "1975",
                 owned: "yes",
                 id: 4,
    }, {   
-                cover: "src/covers/rolling-stones.jpg",
+                cover: "./assets/covers/rolling-stones.jpg",
                 artist: "The Rolling Stones",
                 album: "Exile on Main Street",
                 year: "1972",
@@ -45,7 +45,7 @@
         artist: " ",
         album: " ",
         year: " ",
-        owned: ' ',
+        owned: "not yet",
         };
     const state = reactive({vinyls ,newVinylObj});
 
@@ -62,7 +62,7 @@
         state.newVinylObj.artist = "";
         state.newVinylObj.album = "";
         state.newVinylObj.year = "";
-        state.newVinylObj.owned = false;
+        state.newVinylObj.owned = "not yet";
     }
 
     function handleDelete (albumToDelete) {
@@ -95,7 +95,7 @@
             v-on:delete-album="handleDelete"
         />
         <div class="add-vinyl-form">
-            <form v-on:submit.prevent="submitHandler" class="new-vinyl-form">
+            <form v-on:submit.prevent="addNewVinyl" class="new-vinyl-form">
                 <fieldset>
                     <legend>Add a vinyl to the collection</legend>
                     <div>
@@ -202,6 +202,7 @@ img {
     background: #11485F;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem 0;
 }
 
 .new-vinyl-form div {
@@ -214,6 +215,7 @@ legend {
     background: white;
     color:#EEC643;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
     padding: 10px;
     border-radius: 10px;
 }
