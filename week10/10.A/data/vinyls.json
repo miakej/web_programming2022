@@ -1,0 +1,42 @@
+[
+    {
+      "cover": "./assets/covers/marvin-gaye.jpg",
+      "artist": "Marvin Gaye",
+      "album": "What's Going On",
+      "year": "1971",
+      "owned": "yes",
+      "id": 1
+    },
+    {
+      "cover": "./assets/covers/joni-mitchell.jpg",
+      "artist": "Joni Mitchell",
+      "album": "Blue",
+      "year": "1971",
+      "owned": "yes",
+      "id": 2
+    },
+    {
+      "cover": "./assets/covers/fleetwood-mac.jpg",
+      "artist": "Fleetwood Mac",
+      "album": "Rumors",
+      "year": "1977",
+      "owned": "yes",
+      "id": 3
+    },
+    {
+      "cover": "./assets/covers/bob-dylan.jpg",
+      "artist": "Bob Dylan",
+      "album": "Blood on the Tracks",
+      "year": "1975",
+      "owned": "yes",
+      "id": 4
+    },
+    {
+      "cover": "./assets/covers/rolling-stones.jpg",
+      "artist": "The Rolling Stones",
+      "album": "Exile on Main Street",
+      "year": "1972",
+      "owned": "not yet",
+      "id": 5
+    }
+  ]
