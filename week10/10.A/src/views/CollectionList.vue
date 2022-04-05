@@ -7,5 +7,5 @@
 
 <template>
     <h1>Vinyl List</h1>
-    <ItemRow v-for="(item, index) in VinylList" :key="index" :item="item" />
+    <ItemRow v-for="(album, index) in VinylList" :key="index" :item="album" />
 </template>

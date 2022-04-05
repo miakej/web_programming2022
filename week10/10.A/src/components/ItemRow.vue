@@ -1,15 +1,15 @@
 <script setup>
-    import 
+    import { RouterLink } from 'vue-router';
     const props = defineProps (["album", "index"]);
     console.log('the album', props.album); 
 </script>
 
 <template>
-<RouterLink :to="/collection/" + item.id=" class="item-container"> //didn't catch this part
+<RouterLink :to="'/collection/' + album.id" class="album-container"> 
     <div class="tbody">
         <div class="tr" v-bind:class="{tr: true, even: index % 2 === 0, odd: index % 2 !== 0}">
             <div class="td album-cover">
-                <img :title="album.album" :src="album.cover" :alt="album.artist + ' ' + album.album + ' cover art'"></div>
+                <img :src="album.cover" :alt="album.artist + ' ' + album.album"></div>
             <div class="td album-name">{{album.album}}</div>
             <div class="td artist-name">{{album.artist}}</div>
             <div class="td album-year">{{album.year}}</div>
@@ -20,7 +20,8 @@
 </template>
 
 <style scoped>
-.collectionRow {
-    border: 1px solid black
+.album-container {
+    border: 1px solid black;
+    width: 300px;
 } 
 </style>

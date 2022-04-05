@@ -1,13 +1,13 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import CollectionList from '../views/CollectionList.vue'
-import CollectionDetails from '../views/CollectionDetails.vue'
+import { createRouter, createWebHashHistory } from 'vue-router';
+import Home from '../views/Home.vue';
+import CollectionList from '../views/CollectionList.vue';
+import CollectionDetails from '../views/CollectionDetails.vue';
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/', // detail path
+      path: '/', // default path
       name: 'home',
       component: Home
     },
