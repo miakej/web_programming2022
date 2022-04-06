@@ -5,23 +5,14 @@
 </script>
 
 <template>
-<RouterLink :to="'/collection/' + album.id" class="album-container"> 
-    <div class="tbody">
-        <div class="tr">
-            <div class="td album-cover">
-                <img :src="album.cover" :alt="album.artist + ' ' + album.album"></div>
-            <div class="td album-name">{{album.album}}</div>
-            <div class="td artist-name">{{album.artist}}</div>
-            <div class="td album-year">{{album.year}}</div>
-            <div class="td album-owned">{{album.owned}}</div>
-        </div>
+<RouterLink :to="'/collection/' + album.id" class="albumContainer"> 
+    <div class="tr">
+        <div class="album-cover">
+            <img :src="album.cover" :alt="album.artist + ' ' + album.album"></div>
+        <div class="album-name">{{album.album + ' by ' + album.artist}}</div>
     </div>
 </RouterLink>
 </template>
 
 <style scoped>
-.album-container {
-    border: 1px solid black;
-    width: 300px;
-} 
 </style>

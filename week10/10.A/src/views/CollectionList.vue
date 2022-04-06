@@ -9,3 +9,8 @@
     <h1>Vinyl List</h1>
     <ItemRow v-for="(album, index) in VinylList" :key="index" :album="album" />
 </template>
+
+<style scoped>
+
+
+</style>
