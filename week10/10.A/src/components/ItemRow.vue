@@ -7,7 +7,7 @@
 <template>
 <RouterLink :to="'/collection/' + album.id" class="album-container"> 
     <div class="tbody">
-        <div class="tr" v-bind:class="{tr: true, even: index % 2 === 0, odd: index % 2 !== 0}">
+        <div class="tr">
             <div class="td album-cover">
                 <img :src="album.cover" :alt="album.artist + ' ' + album.album"></div>
             <div class="td album-name">{{album.album}}</div>

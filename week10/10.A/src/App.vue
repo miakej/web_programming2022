@@ -12,5 +12,10 @@ import NavigationBar from './components/NavigationBar.vue';
 </template>
 
 <style>
-
+body {
+  background-color: aliceblue;
+}
+img {
+  max-width: 200px;
+}
 </style>
