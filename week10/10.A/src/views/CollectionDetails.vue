@@ -31,6 +31,7 @@
     }
     p {
         color: rgb(82, 138, 190);
+        font-family: sans-serif;
     }
     .detailBox {
         padding: 1rem 0;

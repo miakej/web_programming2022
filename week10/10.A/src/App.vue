@@ -13,30 +13,31 @@ import NavigationBar from './components/NavigationBar.vue';
 
 <style>
 body {
-  background-color: #fdfdff;
+  background-color: #bee3db;
   margin: 1rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 img {
   max-width: 200px;
 }
 
 .albumContainer {
-    display: inline-flex;
-    justify-content: space-between;
-    min-width: 400px;
-    width: 300px;
-    text-decoration: none;
+  display: inline-flex;
+  justify-content: space-between;
+  min-width: 400px;
+  width: 300px;
+  text-decoration: none;
 } 
 .tr {
-    display: flex;
-    align-items: center;
-    font-size: 1.75em;
-    color: #555b6e;
-    text-decoration: none;
-    padding: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.75em;
+  color: #555b6e;
+  text-decoration: none;
+  padding: 1rem;
 }
 .tr:hover {
-    background: #bee3db;
+    background: #fdfdff;
     color: #2b2d42;
 }
 .album-name {
@@ -45,18 +46,21 @@ img {
 .nav-bar {
   font-size: 2rem;
   color: #2b2d42;
+  text-align: center;
+  padding: 10px;
 }
 .nav-bar a {
   text-decoration: none;
-  color: #555b6e;
+  color: #2b2d42;
 }
 
 .nav-bar a:hover {
-  color: #2b2d42;
-  text-decoration: 2px wavy underline #2b2d42;
+  color: #555b6e;
+  text-decoration: 2px wavy underline #555b6e;
 }
 
-h1 {
-        color: #2b2d42;
-    }
+h1 , h2{
+  color: #555b6e;
+  text-align: center;
+}
 </style>
