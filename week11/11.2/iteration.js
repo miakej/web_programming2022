@@ -1,10 +1,15 @@
 function setup() {
-    createCanvas(windowWidth, windowHeight);
-    background(random(200), random(200), random(200), 50);
-
-    for (let i=0; i < 2000; i++) {
-        fill(random(255), random(255), random(255), random(255));
-        noStroke();
-        rect(random(windowWidth), random(windowHeight), random(100), random(100), 20)
+    createCanvas(windowWidth, windowHeight, WEBGL);
+  }
+  
+function draw() {
+    background(0);
+    fill(random(255), 0, random(255));
+    for (x = 0; x <= mouseX; x += 80) {
+        for (y = 0; y <= mouseY; y += 80) {
+        rotateX(frameCount * 0.009);
+        rotateY(frameCount * 0.009);
+        box(100);
+        }
     }
 }
