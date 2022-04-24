@@ -1,3 +1,5 @@
+// used as guide: https://www.youtube.com/watch?v=sZBfLgfsvSk 
+
 let ants = [];
 const num = 1000; // number of ants
 const noiseScale = 0.02; // more noise
