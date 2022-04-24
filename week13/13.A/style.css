@@ -1,0 +1,30 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    font-size: 3em;
+    margin: 30;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover {
+    color: orange;
+}
+
+.active {
+    color: turquoise;
+}
+
+.navbar {
+    background-color: white;
+}
