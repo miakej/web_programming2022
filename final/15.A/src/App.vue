@@ -27,7 +27,7 @@ import NavigationBar from './components/NavigationBar.vue';
 
   body {
     margin: 0;
-    font-family: "Montserrat";
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 300;
   }
   .nav-bar {
