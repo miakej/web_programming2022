@@ -35,7 +35,7 @@ import NavigationBar from './components/NavigationBar.vue';
     font-weight: 700;
     font-family: "Syncopate";
     color: var(--main);
-    background: var(--navbackground);
+    /* background: var(--navbackground); */
     padding: 2rem;
   }
   .nav-bar a {
@@ -62,7 +62,7 @@ import NavigationBar from './components/NavigationBar.vue';
   video {
   position: fixed;
     z-index: -2;
-    top: 2rem;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
