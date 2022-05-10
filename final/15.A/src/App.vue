@@ -54,6 +54,9 @@ import NavigationBar from './components/NavigationBar.vue';
     padding: 0;
     line-height: 1em;
   }
+  h4 {
+    text-align: center;
+  }
 
 /* home style */
   video {
@@ -102,8 +105,7 @@ import NavigationBar from './components/NavigationBar.vue';
   .albumContainer {
     display: inline-flex;
     justify-content: left;
-    min-width: 400px;
-    max-width: 470px;
+    width: 470px;
     text-decoration: none;
     border: 1px solid var(--accent);
     box-shadow: 5px 5px var(--accent);
@@ -119,6 +121,7 @@ import NavigationBar from './components/NavigationBar.vue';
   .tr:hover {
       background: var(--secondary);
       color: white;
+      border: px solid var(--secondary);
   }
   .album-name {
     padding-left: 10px;

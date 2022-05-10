@@ -13,8 +13,8 @@
     <div class="detailBox">
         <h1>{{album.artist + ', ' + album.album}}</h1>
         <h2>Rank: #{{album.rank}} Greatest Album of All Time</h2>
+        <h4>Hear to the Hits - {{album.sample}}:</h4>
         <div class="audioplayer">
-            <h4>play album sample:</h4>
             <audio controls>
                 <source :src="album.audio" type="audio/mpeg">
                 Your browser does not support the audio element.
