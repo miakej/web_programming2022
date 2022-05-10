@@ -1,7 +1,7 @@
 <template>
 <div class="homeContent">
   <video autoplay muted loop id="myVideo">
-      <source src="/assets/covers/vinylvideo6.mp4" type="video/mp4">
+      <source src="https://mestenson.studio.mcad.edu/web_programming2022/final/vinylvideo6.mp4" type="video/mp4">
   </video>
   <div class="content">
       <p>The vinyl-revival has been one of the largest comeback stories in music history. In an industry littered with marketing ploys and cheap gimmicks, vinyl records give fans an intimate connection to music. Physically going to a store to purchase an album, holding the cover art and listening to the songs in their intended order creates a deeper listening experience. The signature warm sound that a high-quality turntable produces can get any music enthusiast hooked. </p>

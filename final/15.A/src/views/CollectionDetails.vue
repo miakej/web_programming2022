@@ -21,10 +21,12 @@
             </audio>
         </div>
         <img :src="album.cover" :alt="album.album" />
-        <p>{{album.body1}}</p>
-        <p>{{album.body2}}</p>
-        <p>{{album.body3}}</p>
-        <p>{{album.body4}}</p>
+        <div class="about">
+            <p>{{album.body1}}</p>
+            <p>{{album.body2}}</p>
+            <p>{{album.body3}}</p>
+            <p>{{album.body4}}</p>
+        </div>
     </div>
 </template>
 
@@ -32,7 +34,7 @@
     .audioplayer {
         display: flex;
         justify-content: center;
-        gap: 1rem
+        gap: 1rem;
     }
     h2 {
         color: 
@@ -40,12 +42,17 @@
     }
     img {
         float: right;
-        padding: 1.5rem 0 2rem 2rem;
         max-width: 40%;
         max-height: 400px;
+        margin: 1.5rem 8% 2rem 2rem;
+        box-shadow: 10px 10px var(--accent);
     }
     .detailBox {
         padding: 0 2rem;
+    }
+
+    .about {
+        margin-left: 10%;
     }
 
 </style>

@@ -74,7 +74,6 @@ import NavigationBar from './components/NavigationBar.vue';
     z-index: -1;
     top: 100px;
     width: 30%;
-    /* height: 100%; */
     background: var(--overlay);
     padding: 0 2rem;
     margin: 0 2rem;
@@ -83,7 +82,6 @@ import NavigationBar from './components/NavigationBar.vue';
   }
   .content p {
     color: var(--body);
-    /* width: 40%; */
     font-size: 1.2em;
     font-weight: 700;
   }
