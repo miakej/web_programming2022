@@ -7,6 +7,8 @@ import { RouterLink } from 'vue-router';
     <div class="nav-bar">
     <RouterLink to = "/">Home</RouterLink> |
     <RouterLink to = "/collection">Collection</RouterLink>
+    |
+    <RouterLink to ="/test">test</RouterLink>
     </div>
 </template>
 

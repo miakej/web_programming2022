@@ -1,8 +1,6 @@
 <script setup>
     import VinylList from "../data/vinyls.json";
     import ItemRow from "../components/ItemRow.vue";
-
-    console.log(VinylList);
 </script>
 
 <template>

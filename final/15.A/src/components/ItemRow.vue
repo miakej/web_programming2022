@@ -12,6 +12,7 @@
         <div class="album-name"><strong>{{'#' + album.rank + '. ' +  album.album + ' ————— '}}</strong>
         <div class="artist-name">{{album.artist}}</div></div>
     </div>
+    
 </RouterLink>
 </template>
 
