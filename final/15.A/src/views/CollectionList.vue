@@ -81,8 +81,7 @@
 .add-vinyl-form {
     position: fixed;
     right: 1rem;
-    width: 440px;
-    height: 245px;
+    max-width: 320px;
     color: var(--secondary);
     background: white;
     border: 1px solid var(--secondary);
@@ -102,18 +101,19 @@ legend {
 }
 
 input {
-    padding: 5px;
+    padding: 2.5px;
     border: 1px solid var(--accent);
-    margin: 3px;
+    margin: 4px;
     font-family: 'montserrat', Helvetica, sans-serif;
     font-size: .75em;
     font-weight: 300;
     box-shadow: 2px 2px var(--main);
+    width: 50%
 }
 
 .title {
     float: left;
-    width: 120px;
+    width: 30%;
     text-align: right;
     padding-right: 10px;
 }
@@ -131,7 +131,7 @@ button {
     font-family: 'montserrat', sans-serif;
     font-size: .8em;
     font-weight: 300;
-    margin-top: 1rem;
+    margin-top: 5px;
     margin-left: 132px;
 }
 </style>

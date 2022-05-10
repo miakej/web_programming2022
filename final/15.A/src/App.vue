@@ -98,12 +98,12 @@ import NavigationBar from './components/NavigationBar.vue';
 /* collection page style */
 
   img {
-    max-width: 240px;
+    max-width: 200px;
   }
   .albumContainer {
     display: inline-flex;
     justify-content: left;
-    width: 470px;
+    width: 400px;
     text-decoration: none;
     border: 1px solid var(--accent);
     box-shadow: 5px 5px var(--accent);
