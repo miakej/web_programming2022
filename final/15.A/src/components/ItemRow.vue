@@ -9,10 +9,8 @@
     <div class="tr">
         <div class="album-cover">
             <img :src="album.cover" :alt="album.artist + ' ' + album.album"></div>
-        <div class="album-name">
-            <h3>{{album.album}}</h3>
-            <h4>{{album.artist}}</h4>
-        </div>
+        <div class="album-name"><strong>{{'#' + album.rank + '. ' +  album.album + ' ————— '}}</strong>
+        <div class="artist-name">{{album.artist}}</div></div>
     </div>
 </RouterLink>
 </template>

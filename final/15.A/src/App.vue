@@ -15,6 +15,16 @@ import NavigationBar from './components/NavigationBar.vue';
 /* global styles  */
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,200&family=Syncopate:wght@400;700&display=swap');
 
+  :root {
+    --main: red;
+    --secondary: blue;
+    --mainhover: green;
+    --accent: orange;
+    --overlay: rgba(255, 255, 255, 0.0);
+    --body: white;
+    --navbackground: rgb(255, 255, 255);
+  }
+
   body {
     margin: 0;
     font-family: "Montserrat";
@@ -24,93 +34,96 @@ import NavigationBar from './components/NavigationBar.vue';
     font-size: 2rem;
     font-weight: 700;
     font-family: "Syncopate";
-    color: #2b2d42;
-    text-align: left;
+    color: var(--main);
+    background: var(--navbackground);
     padding: 2rem;
   }
   .nav-bar a {
     text-decoration: none;
-    color: #2b2d42;
+    color: var(--main);
   }
   .nav-bar a:hover {
-    color: #555b6e;
-    text-decoration: 2px wavy underline #555b6e;
+    color: var(--mainhover);
+    text-decoration: 2px wavy underline var(--mainhover);
   }
   h1 , h2{
-    color: #555b6e;
+    color: var(--secondary);
     font-family: "syncopate";
     text-align: center;
   }
   h3 {
     font-size: 1.25em;
-    color: #2b2d42;
-    padding: 0;
-  }
-  h4 {
-    font-size: 1.25em;
-    color: #555b6e;
+    color: var(--accent);
     padding: 0;
     line-height: 1em;
-  }
-
-/* collection page style */
-  img {
-    max-width: 200px;
-  }
-  .albumContainer {
-    display: inline-flex;
-    justify-content: space-between;
-    min-width: 400px;
-    width: 300px;
-    text-decoration: none;
-  } 
-  .tr {
-    display: flex;
-    align-items: center;
-    font-size: 1.25em;
-    color: #555b6e;
-    text-decoration: none;
-    padding: 1rem;
-  }
-  .tr:hover {
-      background: #fdfdff;
-      color: #2b2d42;
-  }
-  .album-name {
-    padding: 10px;
   }
 
 /* home style */
   video {
   position: fixed;
-    top: 0;
+    z-index: -2;
+    top: 2rem;
     left: 0;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-      object-fit: cover;
-    -o-object-position: center;
-      object-position: center;
-  z-index: -2;
+    object-fit: cover;
+    object-position: 10%;
   }
   .content {
     position: fixed;
     z-index: -1;
     top: 100px;
-    color: #2b2d42;
-    width: 45%;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay);
     padding: 0 2rem;
     margin: 0 auto;
-    text-align: left;
-    font-size: 1.25em;
+  }
+  .content p {
+    color: var(--body);
+    width: 95%;
+    font-size: 1.2em;
     font-weight: 300;
   }
   .content a {
     text-decoration: none;
-    color: #2b2d42;
+    color: var(--body);
   }
   .content a:hover {
-      color: white;
+      color: var(--mainhover);
       text-decoration: wavy underline;
   } 
+
+
+/* collection page style */
+
+  img {
+    max-width: 240px;
+  }
+  .albumContainer {
+    display: inline-flex;
+    justify-content: left;
+    min-width: 400px;
+    max-width: 470px;
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    box-shadow: 5px 5px var(--accent);
+    margin: 1rem;
+  } 
+  .tr {
+    display: flex;
+    align-items: flex-start;
+    color: var(--secondary);
+    text-decoration: none;
+    padding: 1rem;
+  }
+  .tr:hover {
+      background: var(--secondary);
+      color: white;
+  }
+  .album-name {
+    padding-left: 10px;
+    font-size: 1.5em;
+  }
+
 </style>

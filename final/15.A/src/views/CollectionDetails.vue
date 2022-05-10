@@ -24,7 +24,7 @@
 <style scoped>
     h2 {
         color: 
-        #2b2d42;
+        var(--mainhover);
     }
     img {
         float: right;
@@ -32,12 +32,8 @@
         max-width: 40%;
         max-height: 400px;
     }
-    p {
-        color: rgb(82, 138, 190);
-        font-family: sans-serif;
-    }
     .detailBox {
-        padding: 6rem 2rem;
+        padding: 0 2rem;
     }
 
 </style>
