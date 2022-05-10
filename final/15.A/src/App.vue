@@ -20,9 +20,8 @@ import NavigationBar from './components/NavigationBar.vue';
     --secondary: blue;
     --mainhover: green;
     --accent: orange;
-    --overlay: rgba(255, 255, 255, 0.0);
-    --body: white;
-    --navbackground: rgb(255, 255, 255);
+    --overlay: rgba(255, 255, 255, 0.9);
+    --body: black;
   }
 
   body {
@@ -34,8 +33,7 @@ import NavigationBar from './components/NavigationBar.vue';
     font-size: 2rem;
     font-weight: 700;
     font-family: "Syncopate";
-    color: var(--main);
-    /* background: var(--navbackground); */
+    color: var(--accent);
     padding: 2rem;
   }
   .nav-bar a {
@@ -73,17 +71,19 @@ import NavigationBar from './components/NavigationBar.vue';
     position: fixed;
     z-index: -1;
     top: 100px;
-    width: 100%;
-    height: 100%;
+    width: 30%;
+    /* height: 100%; */
     background: var(--overlay);
     padding: 0 2rem;
-    margin: 0 auto;
+    margin: 0 2rem;
+    border: 1px solid var(--accent);
+    box-shadow: 5px 5px var(--accent);
   }
   .content p {
     color: var(--body);
-    width: 95%;
+    /* width: 40%; */
     font-size: 1.2em;
-    font-weight: 300;
+    font-weight: 700;
   }
   .content a {
     text-decoration: none;
